@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JotaMarvel - Camino a Doomsday</title>
+  <title>JotaMarvel</title>
   <style>
     /* Estilos generales */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #0d0d0d;
+      background-image: url(media/fondo.png);
       color: #ffffff;
     }
 
     header {
-      background-color: #1a1a1a;
+      background-color: #383838;
       padding: 1rem;
       text-align: center;
-      border-bottom: 3px solid #e62429; /* rojo Marvel */
+      border-bottom: 3px solid black; 
     }
 
     header h1 {
@@ -40,13 +40,25 @@
 
     nav a:hover {
       color: #e62429;
+      transition: background-color 0.3s ease-in-out;
     }
 
     .hero {
-      padding: 3rem 1rem;
-      text-align: center;
-      background: url("https://upload.wikimedia.org/wikipedia/en/0/0c/Doctor_Doom_Infobox.jpg") center/cover no-repeat;
-      color: #fff;
+    margin: 2rem auto;           /* Centra el contenedor horizontalmente */
+    padding: 3rem 1rem;
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;           /* Limita el ancho máximo */
+    color: #fff;
+    border: 3px solid #000;      /* Marco negro */
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.2);
+    }
+    
+    .hero:hover{
+        background: rgba(0, 0, 0, 0.5);
+        transition: background-color 0.3s ease-in-out;
     }
 
     .hero h2 {
@@ -56,8 +68,7 @@
     }
 
     .section {
-      padding: 2rem 1rem;
-      max-width: 900px;
+      max-width: 75%;
       margin: auto;
     }
 
@@ -74,14 +85,64 @@
 
     .btn:hover {
       background-color: #b71c1c;
+      transition: background-color 0.3s ease-in-out;
     }
 
+    .columns {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Cambiado para igualar alturas */
+  gap: 2rem;
+  max-width: 1100px;
+  margin: auto;
+  flex-wrap: wrap;
+  text-align: left;
+}
+.col {
+  flex: 1 1 350px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.col-img {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+.col-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.col-img h2 {
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: unset;
+}
+    .central-btn {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    }
+    
     footer {
       background: #1a1a1a;
       color: #aaa;
       text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+      position: absolute;
+      bottom: 0;
+      padding: 1;
+      width: 100%;
     }
   </style>
 </head>
@@ -96,29 +157,37 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <h2>Camino a Doomsday</h2>
-    <p>Descubre la saga que conecta todo el UCM con Doctor Doom.</p>
-    <a class="btn" href="https://www.youtube.com/@JotaMarvel" target="_blank">Ver en YouTube</a>
-  </section>
-
-  <section class="section">
-    <h2>Sobre la serie</h2>
-    <p>
-      <strong>“Camino a Doomsday”</strong> es una serie exclusiva de JotaMarvel que explora paso a paso el
-      camino del UCM hacia uno de los villanos más temibles de los cómics: <em>Doctor Doom</em>.
-      Cada episodio analiza películas, series y eventos clave, descubriendo pistas ocultas y teorías que
-      nos llevan directamente al gran enfrentamiento contra Victor Von Doom.
-    </p>
-    <p>
-      👉 Nuevos episodios disponibles en el canal de YouTube.
-    </p>
-  </section>
+    <section class="hero">
+    <div class="columns">
+        <div class="col col-img">
+        <img src="media/index/caminoaDoomsday.png" alt="Camino a Avengers Doomsday" class="img-responsive">
+        </div>
+        <div class="col col-text">
+        <section class="section">
+        <h2>Camino a Doomsday</h2>
+            <p>
+            <strong>“Camino a Doomsday”</strong> es una serie exclusiva de JotaMarvel que explora paso a paso el
+            camino del UCM hacia uno de los villanos más temibles de los cómics: <em>Doctor Doom</em>.
+            Cada episodio analiza películas, series y eventos clave, descubriendo pistas ocultas y teorías que
+            nos llevan directamente al gran enfrentamiento contra Victor Von Doom.
+            </p>
+            <p>
+            👇 Nuevos episodios disponibles en el canal de YouTube.
+            </p>
+        </section>
+        </div>
+    </div>
+    <div class="central-btn">
+        <a class="btn" href="https://www.youtube.com/playlist?list=PLwBvgY_1gNWwCLiD5-OqlskePq52G0asP" target="_blank">Ver en YouTube</a>
+    </div>
+    </section>
+    
 
   <footer>
     <p>© 2025 JotaMarvel | Sígueme en 
       <a href="https://twitter.com" target="_blank">Twitter</a> · 
       <a href="https://instagram.com" target="_blank">Instagram</a> · 
+      <a href="https://www.tiktok.com/@jotamarvel_" target="_blank">TikTok</a> · 
       <a href="https://www.youtube.com/@JotaMarvel" target="_blank">YouTube</a>
     </p>
   </footer>
