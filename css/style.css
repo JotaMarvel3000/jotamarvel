@@ -1,0 +1,426 @@
+/* ===========================
+   ESTILOS GLOBALES
+=========================== */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===========================
+   CABECERA
+=========================== */
+header {
+  background-color: #1d1c1c;
+  padding: 0.8rem 0;
+  text-align: center;
+  border-bottom: 4px solid #e62429;
+  position: relative;
+}
+
+.header-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.logo-header {
+  width: 160px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  z-index: 1;
+  transition: transform 0.5s ease-in-out;
+}
+.logo-header:hover {
+  transform: scale(1.2);
+}
+
+.menu-row {
+  margin-top: 0.8rem;
+  border-top: 1px solid #444;
+  width: 100%;
+  padding-top: 0.5rem;
+}
+
+.main-menu {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.menu-btn {
+  background: none;
+  color: #ddd;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+}
+.menu-btn:hover {
+  color: #fff;
+}
+.menu-btn::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #e62429;
+  transition: width 0.2s;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+}
+.menu-btn:hover::after {
+  width: 100%;
+}
+
+.social-nav {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  display: flex;
+  gap: 0.7rem;
+  z-index: 2;
+}
+
+.social-btn, .social-btn2 {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 1.5px solid #000;
+  background: #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.social-btn:hover, .social-btn2:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 8px #000;
+}
+
+/* ===========================
+   SECCIÓN CAD
+=========================== */
+.CAD {
+  margin: 2rem auto;
+  padding: 1rem 1rem;
+  text-align: center;
+  width: 90%;
+  max-width: 1200px;
+  color: #000;
+  border: 3px solid #000;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+  background: rgba(90, 88, 88, 0.3);
+}
+.CAD:hover {
+  background: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease-in-out;
+  color: #fff;
+  font-weight: bold;
+}
+.CAD h2 {
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+  text-shadow: 2px 2px 8px #000;
+  background-color: #e62429;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+  border-radius: 12px;
+  color: white;
+}
+.CAD h2:hover {
+  transform: scale(1.02);
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* ===========================
+   SECCIÓN REVIEWS
+=========================== */
+.REVIEWS {
+  margin: 2rem auto;
+  padding: 1rem 1rem;
+  text-align: center;
+  width: 90%;
+  max-width: 1200px;
+}
+.REVIEWS h2 {
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+  text-shadow: 2px 2px 8px #000;
+  background-color: #e62429;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+  border-radius: 12px;
+  color: white;
+}
+.REVIEWS h2:hover {
+  transform: scale(1.02);
+  transition: background-color 0.3s ease-in-out;
+}
+
+h2.REVIEWS-NAME {
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+  text-shadow: 2px 2px 8px #000;
+  background-color: #e62429;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  width: 95%;
+  max-width: 1400px;
+  margin: auto;
+  padding-bottom: 2rem;
+}
+
+.review-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  max-width: 650px;
+  margin: auto;
+}
+.review-card:hover {
+  transform: translateY(-5px);
+}
+.review-card iframe {
+  width: 100%;
+  aspect-ratio: 16 / 8;
+  border: none;
+  min-height: 320px;
+}
+.review-info {
+  padding: 0.8rem;
+  text-align: center;
+}
+.review-info h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+}
+
+/* ===========================
+   SECCIÓN COMICS
+=========================== */
+.COMICS {
+  margin: 2rem auto;
+  padding: 1rem 1rem;
+  text-align: center;
+  width: 90%;
+  max-width: 1200px;
+}
+.COMICS h2 {
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+  text-shadow: 2px 2px 8px #000;
+  background-color: #e62429;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+  border-radius: 12px;
+  color: white;
+}
+.COMICS h2:hover {
+  transform: scale(1.02);
+  transition: background-color 0.3s ease-in-out;
+}
+.comics-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+  width: 95%;
+  max-width: 1400px;
+  margin: auto;
+  margin-top: 0;
+  padding-bottom: 2rem;
+}
+.comic-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative; /* importante para colocar el icono */
+}
+
+.comic-card:hover {
+  transform: translateY(-5px);
+}
+
+.comic-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.comic-info {
+  padding: 0.8rem;
+  padding-bottom: 2rem; /* añade margen extra para no chocar con el icono */
+}
+
+.comic-info h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+}
+
+/* --- ICONO MAS --- */
+.icon-mas {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  bottom: 8px;        /* lo más abajo posible */
+  left: 50%;          /* lo mueve al centro */
+  transform: translateX(-50%); /* corrige el centrado */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.comic-card:hover .icon-mas {
+  opacity: 1;
+}
+
+
+/* ===========================
+   ELEMENTOS GENERALES
+=========================== */
+.section {
+  max-width: 75%;
+  margin: auto;
+}
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.2rem;
+  margin-top: 1rem;
+  background-color: #e62429;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.btn:hover {
+  background-color: #b71c1c;
+  transition: background-color 0.5s ease-in-out;
+  transform: scale(1.1);
+}
+.columns {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: auto;
+  flex-wrap: wrap;
+  text-align: left;
+}
+.col {
+  flex: 1 1 350px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.col-img {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.img-responsive,
+.img-responsive-2 {
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+.img-responsive {
+  max-width: 100%;
+}
+.img-responsive:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in-out;
+}
+.img-responsive-2 {
+  max-width: 65%;
+}
+.img-responsive-2:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+  transform: scale(1.2);
+  transition: transform 0.5s ease-in-out;
+}
+.col-lista {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  max-height: 600px;
+  overflow-y: auto;
+  gap: 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.5) rgba(0,0,0,0.5);
+}
+.fila {
+  padding: 0.5rem 0;
+}
+.central-btn {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.responsive-iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+  width: 100%;
+}
+footer a {
+  color: #e62429;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
